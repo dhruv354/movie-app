@@ -1,0 +1,18 @@
+.tabs{
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+  margin-left: 250px;
+  margin-bottom: -5px;
+}
+
+.tab{
+  margin: 5px;
+  border: 1px ;
+  background-color: white;
+  padding: 6px;
+}
+
+body{
+  background-color: #F0F0F0;
+}
