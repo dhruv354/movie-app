@@ -11,6 +11,20 @@ const data = [
         Poster: 'https://flxt.tmsimg.com/assets/p7825626_p_v10_af.jpg',
         Imdb: 8.8,
         Title: 'Inception'
+    },
+
+    {
+        Plot: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.',
+        Poster: 'https://flxt.tmsimg.com/assets/p7825626_p_v10_af.jpg',
+        Imdb: 8.8,
+        Title: 'Inception'
+    },
+
+    {
+        Plot: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.',
+        Poster: 'https://flxt.tmsimg.com/assets/p7825626_p_v10_af.jpg',
+        Imdb: 8.8,
+        Title: 'Inception'
     }
 ]
 
