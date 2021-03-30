@@ -2,7 +2,7 @@ import React from 'react';
 import './MovieCard.css';
 
 function MovieCard(props){
-        console.log(props)
+        // console.log(props)
         const movie = props.movie
         return (
             // <div className='movie-card-container'>
