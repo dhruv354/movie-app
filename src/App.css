@@ -11,6 +11,13 @@
   border: 1px ;
   background-color: white;
   padding: 6px;
+  /* transition-delay: 0.3s; */
+  cursor: pointer;
+}
+
+.tab:hover{
+  background-color: rgb(154, 226, 19);
+  opacity: 0.5;
 }
 
 body{

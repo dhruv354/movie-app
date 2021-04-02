@@ -66,6 +66,13 @@
     margin-right: 10px;
     background-color: rgb(87, 87, 184);
     color: white;
+    border-color: black;
+}
+
+.Unfavourite-btn{
+    margin-right: 10px;
+    background-color: red;
+    color: white;
 }
 
 
