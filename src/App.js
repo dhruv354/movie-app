@@ -1,8 +1,10 @@
+// eslint-disable-next-line
 import './App.css';
 import React from 'react'
 import Navbar from './Navbar'
 import MovieCard from './MovieCard'
 import data from './data'
+import {addMovies} from './actions'
 
 class App extends React.Component{
   
@@ -16,13 +18,19 @@ class App extends React.Component{
     })
     //make api call
     //dispatch an action
-    store.dispatch({
+
+    //here we are hardcoding our action so should ideally avoid it
+    //rather we should call a function by importing it from our action folder
+   /* store.dispatch({
       type: 'ADD_MOVIES',
       movies: data
-    })
+    })*/
+
+    store.dispatch(addMovies(data));
   }
   render(){
-    const movies = this.props.store.getState();
+    const {store} = this.props;
+    const movies = store.getState().list;
     // console.log(movies);
     return (
       <div className="App">
@@ -32,7 +40,6 @@ class App extends React.Component{
           <div className='tab'>Movies</div>
           <div className ='tab'>Favourites</div>
         </div>
-
         <div className='movie-list'>
           {movies.map((movie, index) => {
           return <MovieCard movie = {movie} key = {index} />
