@@ -13,7 +13,7 @@ class App extends React.Component{
     const {store} = this.props;
     //subscribe method to listen to state change
     store.subscribe(() => {
-      console.log('updated');
+      // console.log('updated');
       this.forceUpdate()
     })
     //make api call

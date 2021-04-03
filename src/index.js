@@ -1,7 +1,7 @@
 //pankage imports
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 
 //file imports
 import './index.css';
@@ -10,16 +10,26 @@ import movies from './reducers'
 import rootReducer from './reducers';
 
 
-const store = createStore(rootReducer)
-// console.log('store', store);
+//redux middleware
+//redux will call this function like logger(obj)(next)(action)
+//i.e. the concept of currying 
+// const logger = ({dispatch, getState}) => {
+//   return function(next){
+//     return function(action){
+//       //middleware code
+//       console.log('ACTION TYPE = ', action.type);
+//       next(action)
+//     }
+//   }
+// }
 
-// store.dispatch({
-//   type: 'ADD_MOVIES',
-//   movies: [{name: 'Hello'}]
-// })
+//above code can be modified like this.
+const logger = ({dispatch, getState}) => (next) => (action) => {
+  console.log('ACTION TYPE: ', action.type);
+  next(action)
+}
 
-// console.log('After State', store.getState());
-// console.log(typeof(store.getState().movies));
+const store = createStore(rootReducer, applyMiddleware(logger))
 
 ReactDOM.render(
   <React.StrictMode>
